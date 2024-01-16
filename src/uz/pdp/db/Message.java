@@ -5,7 +5,7 @@ import java.time.ZonedDateTime;
 import java.util.UUID;
 
 public class Message implements Serializable {
-    private final UUID id = UUID.randomUUID();
+
     private final UUID fromId;
     private final UUID toId;
     private final String text;
@@ -15,10 +15,6 @@ public class Message implements Serializable {
         this.fromId = fromId;
         this.toId = toId;
         this.text = text;
-    }
-
-    public UUID getId() {
-        return id;
     }
 
     public UUID getFromId() {

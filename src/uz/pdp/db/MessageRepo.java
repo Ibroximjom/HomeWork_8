@@ -24,7 +24,6 @@ public class MessageRepo {
     }
 
 
-
     public static void chat(User currentUser, User friendUser) {
         MessageRepo messageRepo = MessageRepo.getInstance();
         List<Message> messages = messageRepo.findAll();
@@ -64,7 +63,7 @@ public class MessageRepo {
 
     private static void sendMessage(User from, User to) {
        MessageRepo messageRepo = MessageRepo.getInstance();
-        String message = Utils.getStr("ENTER_TEXT");
+        String message = Utils.getStr("Habar kiriting");
         System.out.println("LOADING");
         Thread saveMessage = new Thread(() -> {
             messageRepo.save(new Message(from.getId(), to.getId(), message));
